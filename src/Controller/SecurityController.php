@@ -25,9 +25,7 @@ class SecurityController extends BaseSecurityController
             $recaptchaSiteKey = $protectionManager->getConfigurationManager()->getRecaptchaSiteKey();
         }
 
-        $template = sprintf('FOSUserBundle:Security:login.html.%s', $this->container->getParameter('fos_user.template.engine'));
-
-        return $this->container->get('templating')->renderResponse($template, array_merge($data, array(
+        return parent::renderLogin(array_merge($data, array(
             'uniquelibs_recaptcha_site_key' => $recaptchaSiteKey,
         )));
     }
