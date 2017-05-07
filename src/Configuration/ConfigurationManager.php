@@ -102,11 +102,27 @@ class ConfigurationManager
     }
 
     /**
+     * @param string $invalidLoginClass
+     */
+    public function setInvalidLoginClass($invalidLoginClass)
+    {
+        $this->invalidLoginClass = $invalidLoginClass;
+    }
+
+    /**
      * @return string
      */
     public function getLoginAccessClass()
     {
         return $this->loginAccessClass;
+    }
+
+    /**
+     * @param string $loginAccessClass
+     */
+    public function setLoginAccessClass($loginAccessClass)
+    {
+        $this->loginAccessClass = $loginAccessClass;
     }
 
     /**
@@ -118,11 +134,27 @@ class ConfigurationManager
     }
 
     /**
+     * @param string $recaptchaSiteKey
+     */
+    public function setRecaptchaSiteKey($recaptchaSiteKey)
+    {
+        $this->recaptchaSiteKey = $recaptchaSiteKey;
+    }
+
+    /**
      * @return string
      */
     public function getRecaptchaPrivateKey()
     {
         return $this->recaptchaPrivateKey;
+    }
+
+    /**
+     * @param string $recaptchaPrivateKey
+     */
+    public function setRecaptchaPrivateKey($recaptchaPrivateKey)
+    {
+        $this->recaptchaPrivateKey = $recaptchaPrivateKey;
     }
 
     /**
@@ -134,7 +166,15 @@ class ConfigurationManager
     }
 
     /**
-     * @return boolean
+     * @param int $recaptchaNeededFails
+     */
+    public function setRecaptchaNeededFails($recaptchaNeededFails)
+    {
+        $this->recaptchaNeededFails = $recaptchaNeededFails;
+    }
+
+    /**
+     * @return bool
      */
     public function isRecaptchaOnPasswordReset()
     {
@@ -142,11 +182,27 @@ class ConfigurationManager
     }
 
     /**
-     * @return boolean
+     * @param bool $recaptchaOnPasswordReset
+     */
+    public function setRecaptchaOnPasswordReset($recaptchaOnPasswordReset)
+    {
+        $this->recaptchaOnPasswordReset = $recaptchaOnPasswordReset;
+    }
+
+    /**
+     * @return bool
      */
     public function isRecaptchaOnRegistration()
     {
         return $this->recaptchaOnRegistration;
+    }
+
+    /**
+     * @param bool $recaptchaOnRegistration
+     */
+    public function setRecaptchaOnRegistration($recaptchaOnRegistration)
+    {
+        $this->recaptchaOnRegistration = $recaptchaOnRegistration;
     }
 
     /**
@@ -158,6 +214,14 @@ class ConfigurationManager
     }
 
     /**
+     * @param string $lockTime
+     */
+    public function setLockTime($lockTime)
+    {
+        $this->lockTime = $lockTime;
+    }
+
+    /**
      * @return int
      */
     public function getAllowedRetries()
@@ -166,10 +230,26 @@ class ConfigurationManager
     }
 
     /**
-     * @return boolean
+     * @param int $allowedRetries
+     */
+    public function setAllowedRetries($allowedRetries)
+    {
+        $this->allowedRetries = $allowedRetries;
+    }
+
+    /**
+     * @return bool
      */
     public function isAllowOnlyWhitelisted()
     {
         return $this->allowOnlyWhitelisted;
+    }
+
+    /**
+     * @param bool $allowOnlyWhitelisted
+     */
+    public function setAllowOnlyWhitelisted($allowOnlyWhitelisted)
+    {
+        $this->allowOnlyWhitelisted = $allowOnlyWhitelisted;
     }
 }
